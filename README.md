@@ -25,6 +25,10 @@ Projeto simples de agenda telefônica usando Java, com funcionalidades básicas 
 
 Projeto ideal para iniciantes praticarem orientação a objetos e manipulação básica de dados.
 
+## Print da agenda rodando
+
+![Print da agenda no terminal](imagens/AgendaTerminal.JPG)
+
 ---
 
 **Desenvolvido por Emmanuel Gomes**
