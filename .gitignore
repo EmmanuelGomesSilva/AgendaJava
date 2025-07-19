@@ -1,29 +1,18 @@
-### IntelliJ IDEA ###
+# Ignorar pasta e arquivos do IntelliJ IDEA
+.idea/
+*.iml
+
+# Ignorar arquivos compilados
+*.class
+
+# Ignorar arquivo de dados temporário
+contatos.txt
+
+# Ignorar pasta de saída (build)
 out/
-!**/src/main/**/out/
-!**/src/test/**/out/
 
-### Eclipse ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-bin/
-!**/src/main/**/bin/
-!**/src/test/**/bin/
-
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-
-### VS Code ###
-.vscode/
-
-### Mac OS ###
+# Ignorar logs e arquivos temporários do sistema
+*.log
+*.tmp
 .DS_Store
+Thumbs.db
