@@ -1,8 +1,6 @@
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Agenda {
     // Lista que guarda os contatos (nome + telefone)
@@ -90,4 +88,33 @@ public class Agenda {
             System.out.println("Erro ao carregar contatos: " + e.getMessage());
         }
     }
+
+    public void buscarContatoPorNome() {
+        Scanner scanner = new Scanner(System.in);
+        boolean encontrado = false;
+        System.out.println("Digite o nome ou parte dele para buscar no sistema:");
+        String termoBusca = scanner.nextLine().toLowerCase();
+
+        try (BufferedReader leitor = new BufferedReader(new FileReader("contatos.txt"))) {
+            String linha;
+            while ((linha = leitor.readLine()) != null) {
+                String[] partes = linha.split(" - ");
+
+                if (linha.toLowerCase().contains(termoBusca)) {
+                    System.out.println("Contato encontrado: " + linha);
+                    encontrado = true;
+                }
+
+
+            }
+            if (!encontrado) {
+                System.out.println("Nenhum contato encontrado.");
+
+            }
+        } catch (Exception e) {
+            System.out.println("Erro ao carregar contatos: " + e.getMessage());
+        }
+
+    }
+
 }

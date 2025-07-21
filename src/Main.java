@@ -4,6 +4,7 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
+
         Agenda agenda = new Agenda();
         // Ao iniciar, já carrego os contatos que estavam salvos no arquivo
         agenda.carregarContatosDoArquivo();
@@ -17,6 +18,7 @@ public class Main {
             System.out.println("3 - Listar contatos.");
             System.out.println("4 - Alterar contato.");
             System.out.println("5 - Salvar contatos em arquivo.");
+            System.out.println("6 - Buscar contato por nome.");
             System.out.println("0 - Sair");
             System.out.println("Escolha uma opção:");
             opcao = scanner.nextInt();
@@ -78,6 +80,10 @@ public class Main {
                 case 5:
                     // Salva tudo no arquivo pra não perder nada
                     agenda.salvarContatosEmArquivos();
+                    break;
+                case 6:
+                    // Busca contato no arquivo por nome
+                    agenda.buscarContatoPorNome();
                     break;
 
                 default:
